@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>source.gif</file>
+    <file>gifloader.gif</file>
+    <file>exit.png</file>
+  </qresource>
+</RCC>
