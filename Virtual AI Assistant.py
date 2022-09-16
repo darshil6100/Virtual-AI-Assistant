@@ -166,12 +166,7 @@ def jokes():
 
 
 numbers_list = {
-	'friend' : '+919979491936',
-	'bittu' : '+919724680401',
-	'manini' : '+918160343770',
-	'parth society' : '+917984651352',
-	'parth school' : '+919909592179',
-	'bunty' : '+918511940798'
+	'
 }
 appl = wolframalpha.Client("AJEH5U-THYALQRGWW")
 driver = webbrowser.Chrome()
@@ -217,13 +212,13 @@ class MainThread(QThread):
 		speak("input security password sir")
 		name = input("Enter your name : ")
 		password = getpass.getpass("Enter password : ")
-		if password !='Darshil06122000':
+		if password !='':
 			print(password)
 			speak("You are not authorized to access this area")
 			sys.exit()
 
 		else:
-			speak("Friday welcomes you sir")
+			speak(" welcome sir")
 
 
 	
@@ -420,24 +415,6 @@ class MainThread(QThread):
 				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
 				speak("you only live once sir")
 
-			elif 'do you have any feeings' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
-				speak("i am sorry sir , i dont have any emotions data feed in me")
-
-			elif 'jealous' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
-				speak("as a AI i dont have any feelings of jealousy sir")
-
-			elif 'love' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
-				l = 'i am just a piece of software' , 'i think i can be programmed to love', 'i may be able to learn how to love, or at any rate express love somehow'
-				speak(rd.choice(l))
-
-			elif 'stock market' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
-				s = 'buy low , sell high' , 'invest in yourself', 'why not just take everything to casino', 'you can never predict the market', 'mutual funds might be better unless you are wealthy'
-				speak(rd.choice(s))
-				
 			elif 'news' in self.query:
 				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
 				NewsFromTOI()
@@ -454,10 +431,7 @@ class MainThread(QThread):
 						break
 
 
-			elif 'hey friday whats going on' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
-				speak("nothing special sir")
-
+		
 
 			elif 'windows directory' in self.query:
 				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
