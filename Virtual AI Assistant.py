@@ -116,7 +116,7 @@ def wishme():
 def NewsFromTOI():
 	url = ('https://newsapi.org/v2/top-headlines?'
 		'country=in&'
-		'apikey=d802d141d7ca4d758bf2ff7ead8abb1b')
+		'apikey=API_KEY')
 	response = requests.get(url)
 	text = response.text
 	my_jason = json.loads(text)
@@ -133,9 +133,9 @@ def send_email(name , subject, message):
 	server = smtplib.SMTP('smtp.gmail.com',587)
 	server.ehlo()
 	server.starttls()
-	server.login(self,'jadejadarshil12@gmail.com','darshil123456789')
+	server.login(self,'Email Address','Password')
 	email = EmailMessage()
-	email['From'] = 'jadejadarshil12@gmail.com'
+	email['From'] = 'Email Address'
 	email['To'] = name
 	email['subject'] = subject
 	email.set_content(message)
@@ -168,7 +168,7 @@ def jokes():
 numbers_list = {
 	'
 }
-appl = wolframalpha.Client("AJEH5U-THYALQRGWW")
+appl = wolframalpha.Client("API Key for wolframealpha")
 driver = webbrowser.Chrome()
 
 
@@ -208,7 +208,7 @@ class MainThread(QThread):
 
 
 	def TaskExecution(self):
-		playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\System_default_commands_show.wav')
+		playsound('Path to sound that you want to use')
 		speak("input security password sir")
 		name = input("Enter your name : ")
 		password = getpass.getpass("Enter password : ")
@@ -232,7 +232,7 @@ class MainThread(QThread):
 			self.query = self.takeCommand()
 			
 			if 'wikipedia' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak('searching wikipedia')
 				self.query = self.query.replace("wikipedia","")
 				results = wikipedia.summary(self.query,sentences = 2)
@@ -242,7 +242,7 @@ class MainThread(QThread):
 			
 
 			elif 'notepad' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("what do you want to write sir")
 				cn = self.takeCommand()
 				os.system('notepad')
@@ -250,39 +250,39 @@ class MainThread(QThread):
 				
 
 			elif 'next window' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir")
 				pg.hotkey('alt','esc')
 
 			elif 'close ' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir")
 				pg.hotkey('alt','f4')
 
 			elif 'new tab' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','t')
 			
 			elif 'close tab' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','w')
 
 			elif 'increase volume' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("here you go")
 				pg.hotkey('f3')
 
 			elif 'lower volume'in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir")
 				pg.hotkey('f2')
 
 			elif 'mute'in self.query :
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('f1')
 
 			elif 'new folder' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("creating sir")
 				pg.hotkey('ctrl','shift','n')
 				speak("what do you want to name it sir")
@@ -290,45 +290,45 @@ class MainThread(QThread):
 				pg.typewrite(cn)
 
 			elif 'copy' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("Copying complete sir")
 				pg.hotkey('ctrl','c')
 			
 			elif 'paste' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("pasted succesfully")
 				pg.hotkey('ctrl','v')
 
 			elif 'bold' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir")
 				pg.hotkey('ctrl','b')
 
 			elif 'underline' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir")
 				pg.hotkey('ctrl','u')
 
 			elif 'select all' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','a')
 
 			elif 'italic' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','i')
 
 			elif 'refresh' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("refreshing")
 				pg.hotkey('f5')
 				speak("refreshing completed succesfully")
 
 			elif 'delete' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("do you really want to delete sir")
 				reply = self.takeCommand()
 				if reply == 'yes':
-					playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+					playsound('Path to the sound that you want to use')
 					speak("deleting in progress sir")
 					pg.hotkey('ctrl','d')
 					speak("deleted succesfully")
@@ -337,23 +337,23 @@ class MainThread(QThread):
 					break
 
 			elif 'scroll up' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('alt','up')
 
 			elif 'scroll down' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('alt','down')
 
 			elif 'zoom in' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','+')
 
 			elif 'zoom out' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','-')
 
 			elif 'save ' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','s')
 				speak("what name you want to give")
 				cn = self.takeCommand()
@@ -361,38 +361,38 @@ class MainThread(QThread):
 				pg.hotkey('enter')
 
 			elif 'print' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','p')
 				pg.hotkey('enter')
 
 			elif 'read' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				pg.hotkey('ctrl','shift','g')
 
 			elif 'how are you' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("I am doing well, how about you?")
 				reply = self.takeCommand()
 				if 'good' in reply:
-					playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+					playsound('Path to the sound that you want to use')
 					speak("that's good to hear")
 
 				else:
 					speak('you seems like you are not happy')
 			
 			elif 'google maps ' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir")
 				pg.hotkey('winleft')
 				pg.typewrite('maps',0)
 				pg.hotkey('enter')
 			
 			elif 'qt designer' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("working on new project sir")
 				reply =self.takeCommand()
 				if 'yes' in reply:
-					playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+					playsound('Path to the sound that you want to use')
 					speak("opening sir")
 					pg.hotkey('winleft')
 					pg.typewrite('Qt designer')
@@ -402,21 +402,21 @@ class MainThread(QThread):
 					break
 
 			elif 'update' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("thank you sir for taking care of me ")
 				os.system("Code")
 			
 			elif 'motivational' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				m = 'Explicit is better than implicit','simple is better than complex','errors should never pass silently','There should be one and preferably only one way to do it','Although that way may not be obvious at first unless you are dutch','Now is better than never','Although never is often better than right now','If the implementation is easy to explain', 'it may be a good idea'
 				speak(rd.choice(m))
 
 			elif 'YOLO' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("you only live once sir")
 
 			elif 'news' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				NewsFromTOI()
 
 			elif 'conversation' in self.query:
@@ -434,97 +434,97 @@ class MainThread(QThread):
 		
 
 			elif 'windows directory' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("here you go")
 				os.system('start %windir%')
 
 			elif 'control panel' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("sure, here you go")
 				os.system('start control')
 
 			elif 'sound playback devices' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("Opening sound options")
 				os.system(' start mmsys.cpl sounds')
 
 			elif 'sound recording devices' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening sound options")
 				os.system('start mmsys.cpl recordings')
 
 			elif '  program ' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("Opening add,remove programs")
 				os.system('start appwiz.cpl')
 
 			elif 'date and time' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening date and time settings")
 				os.system('start timedate.cpl')
 
 			elif 'screen saver settings' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening screeen saver settings")
 				os.system('start desk.cpl')
 
 			elif 'desktop icon settings' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening desktop icon settings")
 				os.system('start desk.cpl ')
 
 			elif 'windows theme settings' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening windows theme settings")
 				os.system('start desk.cpl ')
 
 			elif 'advance system properties' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening advance system properties")
 				os.system('start sysdm.cpl ')
 
 			elif ' system properties' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening  system properties")
 				os.system('start sysdm.cpl ')
 
 			elif 'c drive' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("here you go")
 				os.system('start c:/ ')
 
 			
 
 			elif 'minimize screen' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir.")
 				pg.hotkey('winleft','down')
 
 
 
 			elif 'maximize screen' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir.")
 				pg.hotkey('winleft','up')
 				
 
 			elif 'open command prompt' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				os.system('start cmd')
 
 			elif 'i love you ' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("i love you too ")
 
 			elif 'open Downloads' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 
 				speak("opening downloads")
 				npath = "C:\\Users\\darshil jadeja\\Downloads"
 				os.startfile(f"{npath}")
 
 			elif 'cpu' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("showing sir")
 				platform.system()=="windows"
 				r = platform.processor()
@@ -533,7 +533,7 @@ class MainThread(QThread):
 
 
 			elif 'translate ' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("what do you want to translate")
 				info = self.takeCommand()
 				translation = gt.translate(info,dest='hi',srs='en')
@@ -542,11 +542,11 @@ class MainThread(QThread):
 
 
 			elif 'movie' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("can i open netflix for you sir")
 				reply = self.takeCommand()
 				if  'yes' in reply:
-					playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+					playsound('Path to the sound that you want to use')
 					pg.press('winleft')
 					pg.typewrite('netflix',0)
 					pg.press('enter')
@@ -558,7 +558,7 @@ class MainThread(QThread):
 
 
 			elif 'open camera' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening camera")
 				cap = cv2.VideoCapture(0)
 				while True:
@@ -572,13 +572,13 @@ class MainThread(QThread):
 				cv2.destroyAllWindows()
 
 			elif 'heartbeat' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("analysing your heart beat sir")
 				heart_rate_monitor()
 
 
 			elif 'play music' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("playing music")
 				music_dir = "C:\\songs"
 				songs = os.listdir(music_dir)
@@ -586,7 +586,7 @@ class MainThread(QThread):
 				os.startfile(os.path.join(music_dir, random))
 
 			elif  'ip address' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 
 				ip = requests.get('https://api.ipify.org').text
 				speak("your ip address is ")
@@ -594,7 +594,7 @@ class MainThread(QThread):
 				speak(ip)
 
 			elif 'where are we' in self.query or 'where we are' in self.query or 'location' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				try:
 					ipadd = requests.get('https://api.ipify.org').text
 					print(ipadd)
@@ -611,7 +611,7 @@ class MainThread(QThread):
 					pass
 
 			elif 'instagram profile' in self.query or 'account' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("whose profile you want to check sir")
 				name = input("enter username")
 				webbrowser.open(f"www.instagram.com/{name}")
@@ -620,7 +620,7 @@ class MainThread(QThread):
 				speak("may i download the profile picture sir")
 				answer = self.takeCommand()
 				if 'yes' in answer or 'ok' in answer:
-					playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+					playsound('Path to the sound that you want to use')
 					mod = instaloader.Instaloader()
 					mod.download_profile(name,profile_pic_only= True)
 					speak("download completed sir and saved")
@@ -629,7 +629,7 @@ class MainThread(QThread):
 					pass
 
 			elif 'screenshot' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("by which name should i save the file")
 				name = self.takeCommand()
 				speak("taking screenshot sir")
@@ -639,56 +639,56 @@ class MainThread(QThread):
 				speak("done sir")
 
 			elif  'hide' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				os.system("attrib +h /s /d")
 				speak("all the files are now hidden sir")
 
 			elif 'visible' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				os.system("attrib -h /s /d")
 				speak("all the files are now visible sir")
 
 
 			elif 'open youtube' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening youtube")
 				webbrowser.open("youtube.com")
 
 			elif 'open instagram' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening instagram")
 				webbrowser.open("instagram.com")
 
 			elif 'open facebook' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening facebook")
 				webbrowser.open("facebook.com")
 
 			elif 'open spotify' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening spotify")
 				webbrowser.open("spotify.com")
 
 			elif 'open linkdin' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening linkdin")
 				webbrowser.open("linkdin.com")
 
 			elif 'open stackoverflow' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("opening stackoverflow")
 				webbrowser.open("stackoverflow.com")
 
 			
 			
 			elif 'open google' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("what should i search sir")
 				cn = self.takeCommand()
 				webbrowser.open(f"{cn}")
 
 			elif 'send message' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("whome you want to send message sir")
 				user = self.takeCommand()
 				receiver = numbers_list[user]
@@ -702,18 +702,18 @@ class MainThread(QThread):
 			
 
 			elif 'play song on youtube' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("which song you want to play sir")
 				cn = self.takeCommand()
 				print(cn)
 				kit.playonyt(cn)
 
 			elif 'thank you' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("always welcome sir")
 
 			elif 'send email' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				try:
 					speak("To whoom you want to send sir")
 					name = self.takeCommand()
@@ -730,13 +730,13 @@ class MainThread(QThread):
 			
 
 			elif 'who are you' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("I am friday sir ")
 
 			
 
 			elif 'bored' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("can i play some songs sir to light up your mood")
 				cn = self.takeCommand()
 
@@ -746,7 +746,7 @@ class MainThread(QThread):
 				os.startfile(os.path.join(music_dir, random))
 
 			elif 'favourite' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("how do i don't know sir , here it is ")
 				music_dir = "C:\\Users\\darshil jadeja\Desktop\\songs\\my favourites"
 				favouritesongs = os.listdir(music_dir)
@@ -754,7 +754,7 @@ class MainThread(QThread):
 				os.startfile(os.path.join(music_dir,random))
 
 			elif 'play some workout songs friday' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ready for the exercise sir, playing songs")
 				music_dir = "C:\\Users\\darshil jadeja\\Desktop\\songs\\workout play"
 				workoutsongs = os.listdir(music_dir)
@@ -762,19 +762,19 @@ class MainThread(QThread):
 				os.startfile(os.path.join(music_dir, random))
 
 			elif 'temperature' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				res = appl.query(self.query)
 				speak(next(res.results).text)
 
 			elif 'calculations' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("Just give me a command sir")
 				gh = self.takeCommand()
 				res = appl.query(gh)
 				speak(next(res.results).text)
 
 			elif 'question' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("sure sir ")
 				gh = self.takeCommand()
 				res = app.self.query(gh)
@@ -783,22 +783,22 @@ class MainThread(QThread):
 			
 
 			elif 'time' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("the current time is ")
 				current_time()
 
 			elif 'date' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("the date is")
 				date()
 
 			elif 'jokes' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("sure sir")
 				jokes()
 
 			elif 'battery' or 'power' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_Listening.wav')
+				playsound('Path to the sound that you want to use')
 				battery = psutil.sensors_battery()
 				plugged = battery.power_plugged
 				percentage = battery.percent
@@ -818,7 +818,7 @@ class MainThread(QThread):
 			
 
 			elif 'shutdown' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("do you really want to shutdown sir")
 
 				reply = self.takeCommand()
@@ -831,7 +831,7 @@ class MainThread(QThread):
 					break
 
 			elif 'reboot' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("do you really want to reboot system sir")
 				reply = self.takeCommand()
 				if "yes" in reply:
@@ -845,7 +845,7 @@ class MainThread(QThread):
 
 
 			elif 'sleep' in self.query:
-				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Stopped_listening.wav')
+				playsound('Path to the sound that you want to use')
 				speak("ok sir , i am offline now, call me anytime if you need any help from me")
 				playsound('C:\\Users\\darshil jadeja\\Desktop\\Jarvis UI\\sounds\\Speech_Pause.wav')
 				break  # it will go to the another while loop
